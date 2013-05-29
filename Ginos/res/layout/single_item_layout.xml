@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:drawSelectorOnTop="false">
+ 
+    <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+    <TextView
+        android:id="@+id/itemid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" 
+        />
+    
+ 
+    <!-- Name Label -->
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:paddingTop="6dip"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/iteminfo"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        />
+    
+    
+     <TextView
+        android:id="@+id/price"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        />
+    
+   
+      <TextView
+        android:id="@+id/smallprice"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        />
+       <TextView
+        android:id="@+id/mediumprice"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        />
+        <TextView
+        android:id="@+id/largeprice"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        />
+         <TextView
+        android:id="@+id/xlargeprice"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black"
+        />
+    
+    
+    <View android:id="@+id/sepbottom" 
+          android:background="#000000" 
+          android:layout_width = "fill_parent"
+          android:layout_height="2dip"
+          android:layout_marginTop="10dip"
+
+          />
+
+   
+ 
+</LinearLayout>

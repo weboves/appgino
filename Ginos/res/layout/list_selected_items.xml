@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:drawSelectorOnTop="false">
+ 
+    <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+    <TextView
+        android:id="@+id/itemid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" 
+        />
+    
+ 
+    <!-- Name Label -->
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="6dip"
+        android:paddingTop="6dip"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/itemid"
+        />
+
+    <TextView
+        android:id="@+id/iteminfo"
+        android:autoLink="web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textSize="14dip"
+        android:textColorHint="@android:color/black" 
+        android:layout_below="@+id/itemname"
+        />
+    
+   
+    
+    
+    <View android:id="@+id/sepbottom" 
+          android:background="#000000" 
+          android:layout_width = "fill_parent"
+          android:layout_height="2dip"
+          android:layout_marginTop="10dip"
+          android:layout_below="@+id/iteminfo"
+          />
+
+    <ImageView
+        android:id="@+id/itemmoreinfo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/arrow" />
+ 
+</RelativeLayout>

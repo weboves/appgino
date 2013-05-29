@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+    <!-- Main ListView
+         Always give id value as list(@android:id/list)
+    -->
+    <TextView
+ android:paddingTop="6dip"
+ android:layout_width="fill_parent"
+ android:layout_height="wrap_content"
+ android:text="@string/selectitem"
+ android:textSize="12sp"
+ android:textStyle="bold"  />
+    <View android:id="@+id/separator" 
+          android:background="#000000" 
+          android:layout_width = "fill_parent"
+          android:layout_height="2dip"
+          android:layout_marginTop="10dip"
+          />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+ 
+</LinearLayout>
