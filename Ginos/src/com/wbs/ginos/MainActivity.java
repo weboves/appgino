@@ -13,14 +13,38 @@ import android.widget.Button;
 public class MainActivity extends Activity {
 	/*Declare Buttons*/
 	Button viewMenu;
+	
+	/*
+	 * Beginning of Declaration of Utilities
+	 */
+	
+	ConnectionDetector cd;
+	// Alert dialog manager
+    AlertDialogManager alert = new AlertDialogManager();
+	
+    /*
+     * End of Utilities
+     */
+    
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 	
+		cd = new ConnectionDetector(getApplicationContext());
+        // Check if connected to internet or not.
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            alert.showAlertDialog(MainActivity.this,
+                    "Awww Snap!",
+                    "Seems like you are not connected to the Internet. Please refer to your network settings.", false);
+            // stop executing code by return
+            return;
+        }        
+        
 		/* findViewById method for buttons.  */
-		viewMenu = (Button)findViewById(R.id.btnviewMenu);
+		viewMenu = (Button)findViewById(R.id.placeorderBtn);
 		
 		
 		viewMenu.setOnClickListener(new View.OnClickListener() {
