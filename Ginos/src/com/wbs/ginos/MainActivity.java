@@ -17,11 +17,8 @@ public class MainActivity extends Activity {
 	/*
 	 * Beginning of Declaration of Utilities
 	 */
-	
 	ConnectionDetector cd;
-	// Alert dialog manager
-    AlertDialogManager alert = new AlertDialogManager();
-	
+    AlertDialogManager alert = new AlertDialogManager(); // Alert dialog manager
     /*
      * End of Utilities
      */
