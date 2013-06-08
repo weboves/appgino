@@ -22,8 +22,9 @@
         android:layout_height="wrap_content"
         android:paddingLeft="6dip"
         android:paddingTop="6dip"
-        android:textSize="14sp"
-        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+         android:textColor="#F60"
         android:layout_toRightOf="@+id/itemid"
         />
 
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         android:paddingLeft="12dip"
         android:paddingTop="6dip"
-        android:textSize="14dip"
+        android:textSize="18dip"
+        android:textColor="#F60"
         android:textColorHint="@android:color/black" 
         android:layout_below="@+id/itemname"
         />

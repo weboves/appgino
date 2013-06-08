@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 	/*Declare Buttons*/
-	Button viewMenu;
+	Button viewMenu, eShop, loyalty, aboutUs;
 	
 	/*
 	 * Beginning of Declaration of Utilities
@@ -42,15 +42,55 @@ public class MainActivity extends Activity {
         
 		/* findViewById method for buttons.  */
 		viewMenu = (Button)findViewById(R.id.placeorderBtn);
-		
+		eShop = (Button)findViewById(R.id.eshopBtn);
+		loyalty = (Button)findViewById(R.id.loyaltyBtn);
+		aboutUs = (Button)findViewById(R.id.aboutBtn);
 		
 		viewMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+            	viewMenu.setBackgroundResource(R.drawable.placeorderclick);
                 Intent i = new Intent(getApplicationContext(), FetchCategoriesActivity.class);
                 startActivity(i);
             }
         });
+		
+		eShop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            	eShop.setBackgroundResource(R.drawable.eshopclick);
+                Intent i = new Intent(getApplicationContext(), EShopActivity.class);
+                startActivity(i);
+            }
+        });
+		
+		loyalty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            	loyalty.setBackgroundResource(R.drawable.loyaltyclick);
+                Intent i = new Intent(getApplicationContext(), LoyaltyActivity.class);
+                startActivity(i);
+            }
+        });
+		
+		aboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            	aboutUs.setBackgroundResource(R.drawable.aboutusclick);
+                Intent i = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(i);
+            }
+        });
+	}
+	
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+		viewMenu.setBackgroundResource(R.drawable.placeorder);
+		eShop.setBackgroundResource(R.drawable.eshop);
+		loyalty.setBackgroundResource(R.drawable.loyalty);
+		aboutUs.setBackgroundResource(R.drawable.aboutus);
 	}
 
 	@Override
@@ -59,5 +99,7 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+
 
 }

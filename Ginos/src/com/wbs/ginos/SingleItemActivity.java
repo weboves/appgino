@@ -89,6 +89,9 @@ public class SingleItemActivity extends ListActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
+            	
+            
+            
                 // getting values from selected ListItem
             	//Display more information with add to cart option.
             }
@@ -141,13 +144,13 @@ public class SingleItemActivity extends ListActivity {
                         	 HashMap<String, String> map = new HashMap<String, String>();
                              // adding each child node to HashMap key => value
                              map.put(TAG_newPID, id);
-                             map.put(TAG_NAME, name);
-                             map.put(TAG_INFO, info);
-                             map.put(TAG_PRICE, price);
-                             map.put(TAG_SMALLPRICE, smallprice);
-                             map.put(TAG_MEDIUMPRICE, mediumprice);
-                             map.put(TAG_LARGE, largeprice);
-                             map.put(TAG_xLARGE, xlargeprice);
+                             map.put(TAG_NAME, "Name: "+name);
+                             map.put(TAG_INFO, "Description: "+info);
+                             map.put(TAG_PRICE, "Price: "+price);
+                             map.put(TAG_SMALLPRICE, "Price of Small: "+ smallprice);
+                             map.put(TAG_MEDIUMPRICE, "Price of Medium: "+ mediumprice);
+                             map.put(TAG_LARGE, "Price of Large: "+ largeprice);
+                             map.put(TAG_xLARGE, "Price of xLarge: "+ xlargeprice);
                             
                         // adding HashList to ArrayList
                         selquesList.add(map);
@@ -173,6 +176,8 @@ public class SingleItemActivity extends ListActivity {
             runOnUiThread(new Runnable() {
                 @Override
 				public void run() {
+                	
+                
                     /**
                      * Updating parsed JSON data into ListView
                      * */

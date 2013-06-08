@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundlogo"
     tools:context=".MainActivity"  >
 <!--  
     <Button
@@ -18,8 +18,8 @@
 
      <Button
          android:id="@+id/aboutBtn"
-         android:layout_width="75dp"
-         android:layout_height="75dp"
+         android:layout_width="110dp"
+         android:layout_height="110dp"
          android:layout_alignBaseline="@+id/loyaltyBtn"
          android:layout_alignBottom="@+id/loyaltyBtn"
          android:layout_alignLeft="@+id/placeorderBtn"
@@ -28,32 +28,30 @@
 
      <Button
          android:id="@+id/loyaltyBtn"
-         android:layout_width="75dp"
-         android:layout_height="75dp"
+         android:layout_width="110dp"
+         android:layout_height="110dp"
          android:layout_alignLeft="@+id/eshopBtn"
          android:layout_below="@+id/eshopBtn"
          android:background="@drawable/loyalty"
          android:textSize="18sp" />
 
      <Button
-         android:id="@+id/placeorderBtn"
-         android:layout_width="75dp"
-         android:layout_height="75dp"
-         android:layout_alignParentTop="true"
-         android:layout_marginTop="163dp"
-         android:layout_toLeftOf="@+id/eshopBtn"
-         android:background="@drawable/placeorder"
+         android:id="@+id/eshopBtn"
+         android:layout_width="110dp"
+         android:layout_height="110dp"
+         android:layout_centerVertical="true"
+         android:layout_toRightOf="@+id/aboutBtn"
+         android:background="@drawable/eshop"
          android:textSize="18sp" />
 
      <Button
-         android:id="@+id/eshopBtn"
-         android:layout_width="75dp"
-         android:layout_height="75dp"
-         android:layout_alignBaseline="@+id/placeorderBtn"
-         android:layout_alignBottom="@+id/placeorderBtn"
-         android:layout_alignParentRight="true"
-         android:layout_marginRight="68dp"
-         android:background="@drawable/eshop"
+         android:id="@+id/placeorderBtn"
+         android:layout_width="110dp"
+         android:layout_height="110dp"
+         android:layout_above="@+id/aboutBtn"
+         android:layout_alignParentLeft="true"
+         android:layout_marginLeft="34dp"
+         android:background="@drawable/placeorder"
          android:textSize="18sp" />
 
 </RelativeLayout>

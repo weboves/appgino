@@ -3,10 +3,13 @@
 
     <string name="app_name">Ginos</string>
     <string name="action_settings">Settings</string>
-    
-    
+
     <!-- Menu Strings -->
-    
+
     <string name="selectitem">Select Category from below.</string>
+    <string name="title_activity_eshop">e-Shop</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_loyalty">Loyalty Card Scheme</string>
+    <string name="title_activity_about">About Us</string>
 
 </resources>

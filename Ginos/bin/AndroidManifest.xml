@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -25,22 +25,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-          <activity
-            android:name=".FetchCategoriesActivity"
+        <activity
+            android:name="com.wbs.ginos.FetchCategoriesActivity"
             android:label="@string/app_name" >
-            </activity>
-            
-           <activity
-            android:name=".FetchSelCatActivity"
+        </activity>
+        <activity
+            android:name="com.wbs.ginos.FetchSelCatActivity"
             android:label="@string/app_name" >
-            </activity>
-            
-            <activity
-            android:name=".SingleItemActivity"
+        </activity>
+        <activity
+            android:name="com.wbs.ginos.SingleItemActivity"
             android:label="@string/app_name" >
-            </activity>
-        
+        </activity>
+        <activity
+            android:name="com.wbs.ginos.EShopActivity"
+            android:label="@string/title_activity_eshop" >
+        </activity>
+        <activity
+            android:name="com.wbs.ginos.LoyaltyActivity"
+            android:label="@string/title_activity_loyalty" >
+        </activity>
+        <activity
+            android:name="com.wbs.ginos.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>
