@@ -2,19 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" 
-   
-    android:drawSelectorOnTop="false">
- 
+    android:drawSelectorOnTop="false"
+    android:orientation="vertical" >
+
     <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+
     <TextView
         android:id="@+id/itemid"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone" 
-        />
-    
- 
+        android:visibility="gone" />
+
     <!-- Name Label -->
 
     <TextView
@@ -23,91 +21,128 @@
         android:layout_height="wrap_content"
         android:paddingLeft="6dip"
         android:paddingTop="6dip"
-        android:textSize="22sp"
-        android:textStyle="bold"
         android:textColor="#F60"
-        />
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/iteminfo"
-        android:autoLink="web"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="12dip"
-        android:paddingTop="6dip"
-        android:textSize="18sp"
-        android:textColor="#F60"
-        android:textColorHint="@android:color/black" 
-        />
-    
-    
-     <TextView
-        android:id="@+id/price"
         android:autoLink="web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dip"
-        android:paddingTop="6dip"
-        android:textSize="16sp"
-        android:textColor="#F60"
-        android:textColorHint="@android:color/black" 
-        />
-    
-   
-      <TextView
-        android:id="@+id/smallprice"
-        android:autoLink="web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dip"
-        android:paddingTop="6dip"
-        android:textSize="16sp"
-        android:textColor="#F60"
-        android:textColorHint="@android:color/black" 
-        />
-       <TextView
-        android:id="@+id/mediumprice"
-        android:autoLink="web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:paddingLeft="12dip"
         android:paddingTop="6dip"
         android:textColor="#F60"
-        android:textSize="16sp"
-        android:textColorHint="@android:color/black" 
-        />
-        <TextView
-        android:id="@+id/largeprice"
-        android:autoLink="web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dip"
-        android:paddingTop="6dip"
-        android:textColor="#F60"
-        android:textSize="16sp"
-        android:textColorHint="@android:color/black" 
-        />
-         <TextView
-        android:id="@+id/xlargeprice"
-        android:autoLink="web"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dip"
-        android:paddingTop="6dip"
-        android:textColor="#F60"
-        android:textSize="16sp"
         android:textColorHint="@android:color/black"
-        />
-    
-    
-    <View android:id="@+id/sepbottom" 
-          android:background="#000000" 
-          android:layout_width = "fill_parent"
-          android:layout_height="2dip"
-          android:layout_marginTop="10dip"
+        android:textSize="18sp" />
 
-          />
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:paddingLeft="12dip"
+        android:paddingTop="6dip"
+        android:textColor="#F60"
+        android:textColorHint="@android:color/black"
+        android:textSize="16sp" />
 
-   
- 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:orientation="vertical" >
+
+            <RadioButton
+                android:id="@+id/small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/xlarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/smallprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:paddingLeft="12dip"
+                android:layout_marginTop="5dip"
+                android:paddingTop="6dip"
+                android:textColor="#F60"
+                android:textColorHint="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/mediumprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="12dip"
+                android:paddingTop="6dip"
+                android:textColor="#F60"
+                android:textColorHint="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/largeprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:paddingLeft="12dip"
+                android:layout_marginTop="20dip"
+                android:paddingTop="6dip"
+                android:textColor="#F60"
+                android:textColorHint="@android:color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/xlargeprice"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:layout_marginTop="20dip"
+                android:paddingLeft="12dip"
+                android:paddingTop="6dip"
+                android:textColor="#F60"
+                android:textColorHint="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/sepbottom"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="10dip"
+        android:background="#000000" />
+
 </LinearLayout>

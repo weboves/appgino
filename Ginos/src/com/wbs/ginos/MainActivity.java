@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
             	eShop.setBackgroundResource(R.drawable.eshopclick);
-                Intent i = new Intent(getApplicationContext(), EShopActivity.class);
+                Intent i = new Intent(getApplicationContext(), ShoppingCartActivity.class);
                 startActivity(i);
             }
         });

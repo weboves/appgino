@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class CustomAdapter extends BaseAdapter {
 
@@ -43,9 +41,9 @@ public class CustomAdapter extends BaseAdapter {
         if(convertView==null)
             vi = inflater.inflate(R.layout.custom_list_row, null);
 
-        TextView title = (TextView)vi.findViewById(R.id.title); // title
-        TextView details = (TextView)vi.findViewById(R.id.details); // details
-        TextView price = (TextView)vi.findViewById(R.id.price); // price
+       // TextView title = (TextView)vi.findViewById(R.id.title); // title
+        //TextView details = (TextView)vi.findViewById(R.id.details); // details
+        //TextView price = (TextView)vi.findViewById(R.id.price); // price
      //   ImageView thumb_image=(ImageView)vi.findViewById(R.id.list_image); // thumb image
 
          /*

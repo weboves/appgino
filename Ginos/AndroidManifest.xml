@@ -49,6 +49,10 @@
             android:name="com.wbs.ginos.AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name="com.wbs.ginos.ShoppingCartActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
