@@ -1,24 +1,6 @@
 /**
  * Displaying the item information with Add to Cart Button. 
  */
-
-/*
- * CHIRAG please implement this accordingly.->>:The code below is required to hide the 3 radiobuttons (medium,large,xlarge) for Category IDs>2
- * You might need to use layoutinflator, arrayadapter.
-RadioButton mediumRadioButton = (RadioButton) findViewById(R.id.medium);
-RadioButton largeRadioButton = (RadioButton) findViewById(R.id.large);
-RadioButton xlargeRadioButton = (RadioButton) findViewById(R.id.xlarge);                         
-Intent intentradiocheck = getIntent();
-int radioavailcheck = intentradiocheck.getIntExtra("int_value", 0);
-Log.i("SingleItemActivity","Value of radioavailcheck: "+radioavailcheck);                        
-if(radioavailcheck > 2)
-{
-Log.i("SingleItemActivity","Inside the if loop because radioavailcheck>2");	
-mediumRadioButton.setVisibility(View.GONE);
-largeRadioButton.setVisibility(View.GONE);
-xlargeRadioButton.setVisibility(View.GONE);
-}
-*/
 package com.wbs.ginos;
 
 import java.util.ArrayList;
@@ -248,8 +230,7 @@ public class SingleItemActivity extends ListActivity {
                             R.layout.single_item_layout, new String[] { TAG_newPID,
                                     TAG_NAME, TAG_INFO, TAG_PRICE },
                             new int[] { R.id.itemid, R.id.itemname, R.id.iteminfo, R.id.price});
-                    
-                    setListAdapter(adapter2);
+                    	setListAdapter(adapter2);
                     }
                 }
             });
