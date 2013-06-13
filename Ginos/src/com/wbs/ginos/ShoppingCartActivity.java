@@ -36,15 +36,22 @@ public class ShoppingCartActivity extends Activity{
 		
 		ListView listView = (ListView)findViewById(R.id.itemlist);
 		Intent intent = getIntent();
+		try{
 		Bundle b = intent.getExtras();
 		p = new Product(b.getString("productname"), b.getDouble("price"));
 		list.add(p);
+		totalprice+=b.getDouble("price");
+		}
+		//To view cart, no bundle is passed. 
+		//Do nothing if bundle is throwing a null pointer exception but simply show the existing cart.  
+		catch(NullPointerException e)
+		{}
 		
 		
 		adapter = new ProductAdapter(this, list);
 		listView.setAdapter(adapter);
 		
-		totalprice+=b.getDouble("price");
+		
 		price = currency.format(totalprice);
 		tv = (TextView)findViewById(R.id.totalprice);
 		tv.setText("Total: "+price.toString());

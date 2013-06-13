@@ -33,8 +33,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
  
 public class SingleItemActivity extends ListActivity {
-	Integer tmp = 1;
-
+	protected boolean bool = false;
     private ProgressDialog pDialog;
     JSONParser jParser = new JSONParser();
     ArrayList<HashMap<String, String>> selquesList;
@@ -58,7 +57,7 @@ public class SingleItemActivity extends ListActivity {
     private static final String TAG_LARGE = "large";
     private static final String TAG_xLARGE = "xlarge";
     
-    private String name, smallprice, mediumprice, largeprice, xlargeprice;
+    private String price, name, smallprice, mediumprice, largeprice, xlargeprice;
     
     JSONArray selques = null;
  
@@ -88,8 +87,6 @@ public class SingleItemActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_item);
         Log.i("SingleItemActivity","Inside oncreate");
-        
-        
         selquesList = new ArrayList<HashMap<String, String>>();
        
 
@@ -110,10 +107,17 @@ public class SingleItemActivity extends ListActivity {
         cartbtn.setOnClickListener(new Button.OnClickListener(){
         	@Override
         	 public void onClick(View v) {
-        	tmp++;
         	Intent i = new Intent(getApplicationContext(), ShoppingCartActivity.class);
         	Bundle b = new Bundle();
-        	String s[] = dataToPass(name, smallprice, mediumprice, largeprice, xlargeprice);
+        	String s[] = new String[2];
+        	if(!bool){
+        	s = dataToPass(name, smallprice, mediumprice, largeprice, xlargeprice);
+        	}
+        	else
+        	{
+        		s[0] = name;
+        		s[1] = price;
+        	}
         	b.putString("productname", s[0]);
         	Log.i("value of price: ", s[1]);
         	b.putDouble("price", Double.valueOf(s[1]));
@@ -129,7 +133,7 @@ public class SingleItemActivity extends ListActivity {
             }
         });
     }
-
+    
     class LoadAllSelques extends AsyncTask<String, String, String> {
     	Intent intent = getIntent();
     	int check = intent.getIntExtra("int_value", 0);
@@ -167,7 +171,7 @@ public class SingleItemActivity extends ListActivity {
                         String id = c.getString(TAG_newPID);
                         name = c.getString(TAG_NAME);
                         String info = c.getString(TAG_INFO);
-                     	String price = c.getString(TAG_PRICE);
+                     	price = c.getString(TAG_PRICE);
                      	smallprice = c.getString(TAG_SMALLPRICE);
                         mediumprice = c.getString(TAG_MEDIUMPRICE);
                         largeprice = c.getString(TAG_LARGE);
@@ -185,11 +189,16 @@ public class SingleItemActivity extends ListActivity {
                              map.put(TAG_xLARGE, "Price of xLarge: "+ xlargeprice);
                         // adding HashList to ArrayList
                         selquesList.add(map);
-                        
+
                     }
                 } else {
                    // nothing was found.
                 }
+                
+                
+                	//finish();
+                	
+                
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -221,16 +230,18 @@ public class SingleItemActivity extends ListActivity {
                                     TAG_NAME, TAG_INFO,TAG_SMALLPRICE,TAG_MEDIUMPRICE,TAG_LARGE,TAG_xLARGE },
                             new int[] { R.id.itemid, R.id.itemname, R.id.iteminfo,R.id.smallprice, R.id.mediumprice, R.id.largeprice,R.id.xlargeprice});
                     // updating listview
+                    bool = false;
                     setListAdapter(adapter);
                     }
                     else
                     {
                     	ListAdapter adapter2 = new SimpleAdapter(
                     		SingleItemActivity.this, selquesList,
-                            R.layout.single_item_layout, new String[] { TAG_newPID,
+                            R.layout.singleitemlayout, new String[] { TAG_newPID,
                                     TAG_NAME, TAG_INFO, TAG_PRICE },
                             new int[] { R.id.itemid, R.id.itemname, R.id.iteminfo, R.id.price});
                     	setListAdapter(adapter2);
+                    bool = true;
                     }
                 }
             });

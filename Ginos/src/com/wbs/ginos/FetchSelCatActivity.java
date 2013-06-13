@@ -73,7 +73,8 @@ public class FetchSelCatActivity extends ListActivity {
         ansbtn.setOnClickListener(new Button.OnClickListener(){
         	@Override
         	 public void onClick(View v) {
-        	//View Cart Activity to be called here!
+        	Intent i = new Intent(getApplicationContext(), ShoppingCartActivity.class);
+        	startActivity(i);
         	}});
         	lv.setOnItemClickListener(new OnItemClickListener() {
             @Override
