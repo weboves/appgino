@@ -15,7 +15,7 @@ gen/
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Eclipse project files
+# Eclipse project files (Required only by Eclipse)
 #.classpath
 #.project //Well i have commented this out since most of us are using Eclipse IDE for our Android project. So we all need this file.
 
