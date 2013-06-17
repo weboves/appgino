@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout02"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip" >
+
+    <Button
+        android:id="@+id/Buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buildNumber"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="Buy this Painting" >
+    </Button>
+
+</RelativeLayout>
