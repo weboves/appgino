@@ -168,7 +168,7 @@ OnItemSelectedListener, OnMultiChoiceClickListener, OnDismissListener {
 	 */
 	public void PayPalButtonClick(View v) {
 		PayPalPayment newPayment = new PayPalPayment(); 
-		//newPayment.setSubtotal(new BigDecimal(mImg_cost[_value])); 
+	//	newPayment.setSubtotal(new BigDecimal(price)); 
 		newPayment.setCurrencyType("USD"); 
 		newPayment.setRecipient("svigra_1322573821_biz@gmail.com"); 
 		newPayment.setMerchantName("Picasso and PayPal");					
